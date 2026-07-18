@@ -1,0 +1,7 @@
+FROM ghcr.io/jiotv-go/jiotv_go
+
+ENV TZ=Asia/Kolkata
+ENV JIOTV_DRM=true
+ENV JIOTV_PATH_PREFIX=/app/.jiotv_go
+
+EXPOSE 80
