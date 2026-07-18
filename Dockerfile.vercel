@@ -4,4 +4,5 @@ ENV TZ=Asia/Kolkata
 ENV JIOTV_DRM=true
 ENV JIOTV_PATH_PREFIX=/app/.jiotv_go
 
-EXPOSE 80
+# Force the jiotv_go engine to serve publicly over Vercel's dynamic environment port
+CMD ["serve", "--public", "--port", "80"]
