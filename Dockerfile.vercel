@@ -1,8 +1,8 @@
 FROM ghcr.io/jiotv-go/jiotv_go
 
+# Enforce correct time zones and video streaming layers
 ENV TZ=Asia/Kolkata
 ENV JIOTV_DRM=true
-ENV JIOTV_PATH_PREFIX=/app/.jiotv_go
 
-# Force the jiotv_go engine to serve publicly over Vercel's dynamic environment port
+# Force the binary to bypass local network limits and serve on Vercel's port 80
 CMD ["serve", "--public", "--port", "80"]
